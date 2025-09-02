@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫韵琴瑟 - 我们的恩爱生活</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', '宋体', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f9f0ff 0%, #e6d4f2 100%);
+            color: #4a2b5a;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(147, 112, 219, 0.1);
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: '楷体', cursive;
+            font-size: 3.5em;
+            color: #6a4c9c;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: fadeIn 2s;
+        }
+
+        .timeline {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(106, 76, 156, 0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 1;
+            transition: transform 0.3s;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .poem-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(230, 212, 242, 0.3);
+            margin: 50px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #b19cd9;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .poem-text {
+            font-style: italic;
+            font-size: 1.2em;
+            line-height: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding: 20px;
+        }
+
+        .poem-text::before,
+        .poem-text::after {
+            content: "❀";
+            color: #9b72cf;
+            font-size: 1.5em;
+            position: absolute;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(106, 76, 156, 0.8);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            .header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>记录·我们的故事</h1>
+    </header>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h2>初遇·心生好感</h2>
+            <p>2018年3月1日 · 晋百慧生物</p>
+            <p>「田寮大厦15楼，那是你的办公位置，那是我们人生第一次遇见」</p>
+        </div>
+        <div class="timeline-item">
+            <h2>牵手·心心相印</h2>
+            <p>2022年12月3日 · 创智云城</p>
+            <p>「我们交往吧，你说好呀，我开心了一整晚」</p>
+        </div>
+        <div class="timeline-item">
+            <h2>缔缘·永结同心</h2>
+            <p>2024年01月01日 · 南山区民政局婚姻登记处</p>
+            <p>「我们领证啦，以后我们就是合法夫妻」</p>
+         </div>
+         <div class="timeline-item">
+            <h2>见证·简约的婚礼</h2>
+            <p>2024年05月12日 · 崇阳县河田村</p>
+            <p>「我们举办了简单的婚礼，让家里人都认识你啦」</p>
+          </div>
+          <div class="timeline-item">
+            <h2>结晶·一家三口</h2>
+            <p>2025年06月01日 · 信义领御</p>
+            <p>「早孕试纸第一次测出阳性，我们要迎来宝宝啦」</p>
+           </div>
+    </div>
+
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="https://picsum.photos/400?random=1" alt="生活照片">
+        </div>
+        <div class="photo-item">
+            <img src="https://picsum.photos/400?random=2" alt="旅行记忆">
+        </div>
+        <div class="photo-item">
+            <img src="https://picsum.photos/400?random=3" alt="日常时光">
+        </div>
+    </div>
+
+    <section class="poem-section">
+        <div class="poem-text">
+            两情若是久长时，又岂在朝朝暮暮。<br>
+            琴瑟在御，莫不静好。<br>
+            死生契阔，与子成说；执子之手，与子偕老。
+        </div>
+    </section>
+
+    <footer>
+        <p>以爱为墨，岁月为笺 · © 2025 我们的爱情故事</p>
+        <p>❤ 心似双丝网，中有千千结 ❤</p>
+    </footer>
+</body>
+
+</html>
